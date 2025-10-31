@@ -1,0 +1,110 @@
+
+direction_id,recipe_id,step_number,instruction
+1,1,1,Wash hands and sanitize surfaces.
+2,1,2,Heat vegetable oil in a skillet over medium-high heat.
+3,1,3,Add chicken breasts and cook until browned on both sides and cooked through.
+4,1,4,"Add cream of chicken soup and water, stir to combine, and bring to a boil."
+5,1,5,"Return chicken to the pan and simmer until internal temperature reaches 165°F, then serve."
+6,2,1,Wash hands and sanitize surfaces.
+7,2,2,"Open cans of beans, corn, and crushed tomatoes and pour into a pot."
+8,2,3,Add chili powder and stir to combine.
+9,2,4,"Heat mixture over medium heat until hot, stirring occasionally."
+10,2,5,Serve hot. Refrigerate leftovers within two hours.
+11,3,1,Wash hands and sanitize surfaces.
+12,3,2,Drain pineapple and mandarin oranges and place in a bowl.
+13,3,3,"Add sliced banana, grapes, marshmallows, and coconut to the bowl."
+14,3,4,Fold in low-fat vanilla yogurt until fruit is coated.
+15,3,5,Cover and chill before serving.
+16,4,1,Wash hands and sanitize surfaces.
+17,4,2,Preheat oven to 325°F (163°C).
+18,4,3,Beat egg whites until foamy; add cream of tartar and continue beating until soft peaks form.
+19,4,4,Gradually beat in sugar until stiff peaks form; add vanilla and salt.
+20,4,5,Gently fold in flour until just combined.
+21,4,6,Pour batter into an ungreased angel food cake pan and bake for about 75 minutes.
+22,4,7,Invert cake to cool before removing from pan and serving.
+23,5,1,Wash hands and sanitize surfaces.
+24,5,2,"In a small bowl, whisk yogurt, mayonnaise, honey and paprika to make dressing."
+25,5,3,Slice bananas and apples.
+26,5,4,"In a large bowl, combine salad greens, banana slices, apple slices and peanuts."
+27,5,5,Pour dressing over salad and toss to coat.
+28,6,1,Wash hands and sanitize surfaces.
+29,6,2,Preheat oven to 350°F (177°C).
+30,6,3,Beat butter and sugar together until light and fluffy.
+31,6,4,"Add eggs one at a time, beating well after each addition."
+32,6,5,"Stir in flour, baking powder, and lemon rind until combined."
+33,6,6,Spread batter into greased baking pan and arrange sliced apples on top.
+34,6,7,"Sprinkle with sugar and bake until a tester comes out clean, about 1 hour."
+35,6,8,Brush warm cake with apricot jam and serve.
+36,7,1,Wash hands and sanitize surfaces.
+37,7,2,Preheat oven to 350°F (177°C).
+38,7,3,"Combine flour, salt, baking soda, cinnamon, brown sugar and oats in a bowl."
+39,7,4,Cut in margarine or butter until mixture resembles coarse crumbs.
+40,7,5,Press half of the crumb mixture into a greased baking dish.
+41,7,6,Arrange sliced apples evenly over crust.
+42,7,7,Sprinkle remaining crumb mixture over apples.
+43,7,8,Bake for 40–45 minutes until golden brown and cut into bars once cool.
+44,8,1,Wash hands and sanitize surfaces.
+45,8,2,"Shred cabbage, grate carrot, chop green pepper and apple, and combine in a bowl."
+46,8,3,"In a separate bowl, mix yogurt, mayonnaise, lemon juice, and dill weed."
+47,8,4,Pour dressing over vegetables and toss to combine.
+48,8,5,Serve immediately or refrigerate.
+49,9,1,Wash hands and sanitize surfaces.
+50,9,2,Preheat oven to 400°F (204°C) and line muffin tin with paper cups.
+51,9,3,"In a bowl, mix milk and applesauce."
+52,9,4,"In another bowl, combine flour, oats, sugar, baking powder and cinnamon."
+53,9,5,Add dry ingredients to wet ingredients and stir until just moistened.
+54,9,6,Fold in chopped apple.
+55,9,7,Fill each muffin cup 2/3 full and bake 15–20 minutes until golden.
+56,9,8,Cool before serving.
+57,10,1,Wash hands and sanitize surfaces.
+58,10,2,"In a bowl, mix light mayonnaise and orange juice."
+59,10,3,"Add diced apples, celery, raisins and nuts and toss to coat."
+60,10,4,Serve chilled.
+61,11,1,Wash hands and sanitize surfaces.
+62,11,2,Core the apple and cut into rounds or thick slices.
+63,11,3,Spread peanut butter on one apple slice and sprinkle with raisins.
+64,11,4,Top with another apple slice to make a sandwich; repeat with remaining slices.
+65,12,1,Wash hands and sanitize surfaces.
+66,12,2,Cut acorn squashes in half and scoop out seeds.
+67,12,3,Microwave squash halves until just tender.
+68,12,4,"Melt butter and stir in chopped apples, brown sugar and cinnamon."
+69,12,5,Spoon apple mixture into squash halves and microwave until squash and apples are soft.
+70,12,6,Serve warm.
+71,13,1,Wash hands and sanitize surfaces.
+72,13,2,Core and slice apples.
+73,13,3,Combine apples and water in a saucepan and bring to a boil.
+74,13,4,Reduce heat and simmer until apples are tender.
+75,13,5,"Stir in sugar until dissolved, mash or puree to desired consistency, and serve warm or chilled."
+76,14,1,Wash hands and sanitize surfaces.
+77,14,2,Rub cumin evenly onto both sides of chicken breasts.
+78,14,3,Cook chicken in a skillet over medium-high heat until cooked through and remove to a plate.
+79,14,4,"Add apricot spread, lemon juice and water to the skillet and stir to create sauce."
+80,14,5,Return chicken to skillet and coat with sauce; serve hot.
+81,15,1,Wash hands and sanitize surfaces.
+82,15,2,Bring a pot of water to a boil and cook asparagus until tender-crisp; drain.
+83,15,3,"In a skillet, melt margarine or butter and add lemon peel and garlic; cook briefly."
+84,15,4,Add cooked asparagus and toss to coat with gremolata sauce.
+85,15,5,Drizzle with lemon juice and serve warm.
+86,16,1,Wash hands and sanitize surfaces.
+87,16,2,Heat olive oil in a large skillet over medium heat.
+88,16,3,"Add onion, garlic and red bell pepper; sauté until softened."
+89,16,4,"Add zucchini, yellow squash, lima beans and corn; cook until vegetables are tender."
+90,16,5,Stir in chopped sage and cook briefly; serve warm.
+91,17,1,Wash hands and sanitize surfaces.
+92,17,2,"In a bowl, combine diced avocado, corn, grape tomatoes, cilantro and lime juice."
+93,17,3,Season with salt and gently toss.
+94,17,4,Chill before serving.
+95,18,1,Wash hands and sanitize surfaces.
+96,18,2,Peel bananas and cut in half lengthwise.
+97,18,3,Place bananas in a baking dish and sprinkle with brown sugar.
+98,18,4,Dot with margarine or butter and sprinkle with raisins and pecans.
+99,18,5,Bake at 350°F (177°C) for about 30 minutes until bananas are soft and caramelized.
+100,19,1,Wash hands and sanitize surfaces.
+101,19,2,Preheat oven to 350°F (177°C).
+102,19,3,"Place chicken pieces in a baking dish and sprinkle with garlic powder, pepper and salt if using."
+103,19,4,Bake for about 1 hour until chicken is cooked through and juices run clear.
+104,20,1,Wash hands and sanitize surfaces.
+105,20,2,Preheat oven to 400°F (204°C).
+106,20,3,"In a bowl, mix cornflake crumbs with paprika, Italian herbs, garlic powder and onion powder."
+107,20,4,Coat chicken pieces with the seasoned crumbs and place on a greased baking sheet.
+108,20,5,Bake for 15–20 minutes or until chicken is cooked through and coating is crispy.

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Receipt Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #fafafa;
+            color: #333;
+        }
+
+        h1 {
+            color: #444;
+        }
+
+        section {
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+            font-family: monospace;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #0066ff;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #004ccc;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        #status,
+        #firebaseStatus {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .info {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🧾 Receipt Manager</h1>
+
+    <!-- Local JSON Management -->
+    <section>
+        <h2>📄 Manage Local Receipt JSON</h2>
+        <button id="fetchBtn">Fetch receipt.json</button>
+        <textarea id="jsonArea" placeholder="Your receipt data will appear here..."></textarea>
+        <button id="updateBtn">Update receipt.json</button>
+        <p id="status" class="info"></p>
+    </section>
+
+    <!-- Image Upload Section -->
+    <section>
+        <h2>📸 Upload Receipt Image</h2>
+        <p>Upload an image to extract text and generate receipt JSON via OCR.</p>
+        <input type="file" id="fileInput" accept="image/*" />
+        <button id="uploadBtn">Upload Image</button>
+        <p id="uploadStatus" class="info"></p>
+    </section>
+
+    <!-- Send to Firebase -->
+    <section>
+        <h2>🔥 Send Receipt JSON to Firebase</h2>
+        <p>Send the contents of <code>receipt.json</code> (fetched from your backend) to Firestore.</p>
+        <button id="sendToFirebaseBtn">Send to Firebase</button>
+        <p id="firebaseStatus" class="info"></p>
+    </section>
+
+    <script>
+        const API_BASE = 'http://localhost:6741';
+        const jsonArea = document.getElementById('jsonArea');
+        const status = document.getElementById('status');
+        const uploadStatus = document.getElementById('uploadStatus');
+        const firebaseStatus = document.getElementById('firebaseStatus');
+        const userId = "super_tuff_mustard_67";
+
+        // --- Fetch local receipt.json ---
+        document.getElementById('fetchBtn').addEventListener('click', async () => {
+            try {
+                const res = await fetch(`${API_BASE}/data`);
+                const data = await res.json();
+                jsonArea.value = JSON.stringify(data, null, 2);
+                status.textContent = '✅ receipt.json fetched successfully.';
+                status.className = 'success';
+            } catch (err) {
+                console.error(err);
+                status.textContent = '❌ Error fetching receipt.json';
+                status.className = 'error';
+            }
+        });
+
+        // --- Update local receipt.json ---
+        document.getElementById('updateBtn').addEventListener('click', async () => {
+            try {
+                const newData = JSON.parse(jsonArea.value);
+                const res = await fetch(`${API_BASE}/data`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(newData)
+                });
+                const result = await res.json();
+                status.textContent = result.message || '✅ JSON updated.';
+                status.className = 'success';
+            } catch (err) {
+                console.error(err);
+                status.textContent = '❌ Error updating JSON.';
+                status.className = 'error';
+            }
+        });
+
+        // --- Upload receipt image ---
+        document.getElementById('uploadBtn').addEventListener('click', async () => {
+            const file = document.getElementById('fileInput').files[0];
+            if (!file) return alert('Select a file first.');
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            uploadStatus.textContent = '⏳ Uploading and processing image...';
+            uploadStatus.className = 'info';
+
+            try {
+                const res = await fetch(`${API_BASE}/receipt_image`, {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await res.json();
+
+                if (res.ok) {
+                    uploadStatus.textContent = '✅ Image processed successfully. Check receipt.json.';
+                    uploadStatus.className = 'success';
+                } else {
+                    uploadStatus.textContent = `❌ Error: ${data.error}`;
+                    uploadStatus.className = 'error';
+                }
+            } catch (err) {
+                console.error(err);
+                uploadStatus.textContent = '❌ Failed to upload image.';
+                uploadStatus.className = 'error';
+            }
+        });
+
+        // --- Send receipt.json to Firebase ---
+        document.getElementById('sendToFirebaseBtn').addEventListener('click', async () => {
+            firebaseStatus.textContent = '⏳ Sending to Firebase...';
+            firebaseStatus.className = 'info';
+
+            try {
+                // 1️⃣ Fetch the latest local receipt JSON
+                const res = await fetch(`${API_BASE}/data`);
+                const receiptData = await res.json();
+
+                if (!Array.isArray(receiptData) || receiptData.length === 0) {
+                    firebaseStatus.textContent = '⚠️ No receipt data to send!';
+                    firebaseStatus.className = 'error';
+                    return;
+                }
+
+                // 2️⃣ Send to Firebase
+                const storeRes = await fetch(`${API_BASE}/store_receipt?userId=${userId}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(receiptData)
+                });
+
+                const data = await storeRes.json();
+
+                if (storeRes.ok) {
+                    firebaseStatus.textContent = data.message || '✅ Sent to Firebase successfully.';
+                    firebaseStatus.className = 'success';
+                } else {
+                    firebaseStatus.textContent = `❌ Firebase error: ${data.error}`;
+                    firebaseStatus.className = 'error';
+                }
+            } catch (err) {
+                console.error(err);
+                firebaseStatus.textContent = '❌ Error sending to Firebase.';
+                firebaseStatus.className = 'error';
+            }
+        });
+    </script>
+</body>
+
+</html>

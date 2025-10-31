@@ -1,0 +1,1 @@
+# NewHacks Grocery Receipt Project

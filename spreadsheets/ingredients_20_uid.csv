@@ -1,0 +1,122 @@
+
+ingredient_id,recipe_id,step,quantity,unit,ingredient_name,notes
+1,1,1,1.0,tablespoon,vegetable oil,
+2,1,2,2.0,,boneless skinless chicken breast halves,
+3,1,3,10.75,ounce can,reduced-sodium cream of chicken soup,
+4,1,4,0.5,cup,water,
+5,2,1,15.5,ounce can,low-sodium black beans,or other beans
+6,2,2,15.2,ounce can,reduced sodium corn,drained or use 1 cup frozen or canned corn
+7,2,3,14.5,ounce can,low-sodium crushed tomatoes,
+8,2,4,1.0,teaspoon,chili powder,
+9,3,1,20.0,ounce can,pineapple chunks,drained
+10,3,2,11.0,ounce can,mandarin oranges,drained
+11,3,3,1.0,medium,banana,sliced
+12,3,4,1.0,cup,seedless grapes,
+13,3,5,0.25,cup,miniature marshmallows,
+14,3,6,0.25,cup,flaked coconut,
+15,3,7,1.0,cup,low-fat vanilla yogurt,
+16,4,1,12.0,large,egg whites,
+17,4,2,1.0,teaspoon,cream of tartar,
+18,4,3,1.5,cups,sugar,
+19,4,4,1.0,teaspoon,vanilla extract,
+20,4,5,0.25,teaspoon,salt,
+21,4,6,1.0,cup,sifted flour,
+22,5,1,12.0,ounce,mixed salad greens,or lettuce mix
+23,5,2,2.0,,ripe bananas,
+24,5,3,2.5,,medium apples,sliced
+25,5,4,0.75,cup,unsalted peanuts,
+26,5,5,0.333,cup,plain low-fat yogurt,
+27,5,6,2.0,tablespoons,reduced-fat mayonnaise,
+28,5,7,1.0,tablespoon,honey,
+29,5,8,2.0,teaspoons,paprika,
+30,6,1,10.0,tablespoons,unsalted butter,
+31,6,2,0.75,cup,sugar,
+32,6,3,3.0,large,eggs,
+33,6,4,1.75,cups,flour,
+34,6,5,2.0,teaspoons,baking powder,
+35,6,6,1.0,tablespoon,lemon rind,grated
+36,6,7,2.0,,medium apples,sliced
+37,6,8,2.0,teaspoons,sugar,for sprinkling
+38,6,9,8.0,tablespoons,apricot jam,
+39,7,1,4.0,,medium apples,peeled and sliced
+40,7,2,1.0,cup,flour,
+41,7,3,0.25,teaspoon,salt,
+42,7,4,0.5,teaspoon,baking soda,
+43,7,5,0.5,teaspoon,ground cinnamon,
+44,7,6,0.5,cup,packed brown sugar,
+45,7,7,1.0,cup,oats,
+46,7,8,0.5,cup,margarine or butter,
+47,7,9,1.0,spray,cooking spray,
+48,8,1,2.0,cups,shredded cabbage,
+49,8,2,1.0,,medium carrot,grated
+50,8,3,0.5,,medium green pepper,chopped
+51,8,4,1.0,,medium apple,chopped
+52,8,5,5.0,tablespoons,low-fat yogurt,
+53,8,6,1.0,tablespoon,low-fat mayonnaise,
+54,8,7,1.0,teaspoon,lemon juice,
+55,8,8,0.25,teaspoon,dill weed,
+56,9,1,0.5,cup,non-fat milk,
+57,9,2,0.333,cup,unsweetened applesauce,
+58,9,3,0.5,cup,flour,
+59,9,4,0.5,cup,quick-cooking oats,
+60,9,5,1.0,cup,sugar,
+61,9,6,0.5,tablespoon,baking powder,
+62,9,7,0.5,teaspoon,ground cinnamon,
+63,9,8,1.0,,tart apple,chopped
+64,10,1,2.0,tablespoons,light mayonnaise,
+65,10,2,1.0,tablespoon,orange juice,
+66,10,3,2.0,cups,diced apples,
+67,10,4,1.0,cup,diced celery,
+68,10,5,0.5,cup,raisins,
+69,10,6,0.5,cup,nuts,chopped
+70,11,1,1.0,,medium apple,
+71,11,2,2.0,tablespoons,peanut butter,
+72,11,3,1.0,tablespoon,raisins,
+73,12,1,4.0,,acorn squashes,
+74,12,2,1.0,tablespoon,butter or margarine,
+75,12,3,2.0,,apples,chopped
+76,12,4,2.0,teaspoons,brown sugar,
+77,12,5,0.5,teaspoon,cinnamon,
+78,13,1,7.0,,apples,
+79,13,2,0.5,cup,water,
+80,13,3,0.25,cup,sugar,
+81,14,1,4.0,,boneless skinless chicken breasts,
+82,14,2,1.0,teaspoon,ground cumin,
+83,14,3,5.0,tablespoons,apricot spread,
+84,14,4,1.0,,lemon,juiced
+85,14,5,2.0,tablespoons,water,
+86,15,1,2.0,pounds,asparagus,trimmed
+87,15,2,1.0,tablespoon,margarine or butter,
+88,15,3,1.0,teaspoon,grated lemon peel,
+89,15,4,1.0,clove,garlic,finely chopped
+90,15,5,1.0,tablespoon,lemon juice,
+91,16,1,1.0,tablespoon,olive oil,
+92,16,2,1.0,,medium onion,chopped
+93,16,3,2.0,cloves,garlic,minced
+94,16,4,1.0,,small red bell pepper,chopped
+95,16,5,2.0,,small zucchini,chopped
+96,16,6,1.0,,small yellow squash,chopped
+97,16,7,1.0,cup,frozen lima beans,thawed
+98,16,8,1.0,cup,frozen corn,thawed
+99,16,9,1.0,tablespoon,fresh sage,chopped
+100,17,1,1.0,,ripe avocado,diced
+101,17,2,1.0,cup,corn kernels,"fresh, frozen or canned"
+102,17,3,1.0,cup,grape tomatoes,halved
+103,17,4,1.0,tablespoon,fresh cilantro,chopped
+104,17,5,1.0,tablespoon,lime juice,
+105,17,6,0.25,teaspoon,salt,
+106,18,1,6.0,,bananas,
+107,18,2,2.0,tablespoons,packed brown sugar,
+108,18,3,2.0,tablespoons,margarine or butter,
+109,18,4,3.0,tablespoons,raisins,or dried fruit
+110,18,5,3.0,tablespoons,pecans,chopped
+111,19,1,8.0,,skinless chicken pieces,breasts and drumsticks (about 2.5-3 lbs)
+112,19,2,1.0,teaspoon,garlic powder,
+113,19,3,1.0,teaspoon,black pepper,
+114,19,4,0.5,teaspoon,salt,optional
+115,20,1,1.0,pound,boneless skinless chicken thighs,cut into 1-inch pieces
+116,20,2,1.0,cup,cornflake cereal crumbs,
+117,20,3,1.0,teaspoon,paprika,
+118,20,4,1.0,teaspoon,Italian herb seasoning,
+119,20,5,0.25,teaspoon,garlic powder,
+120,20,6,0.25,teaspoon,onion powder,

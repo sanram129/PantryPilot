@@ -1,0 +1,5 @@
+*.env
+node_modules
+*.traineddata
+package-lock.json
+serviceAccountKeyFirebase.json
